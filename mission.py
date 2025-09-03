@@ -71,7 +71,7 @@ def main():
     stats = MissionStats()
     print("""
     🛰️=======================================🛰️
-           SPACE MISSION SIMULATOR
+           SPACE MISSION COMMAND CENTER
     🛰️=======================================🛰️
     """)
     while True:
