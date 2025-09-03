@@ -25,3 +25,5 @@ def check_access():
 
 if __name__ == '__main__':
     check_access()
+}'
+SECRET_HINT_2='succ3ss_Y1s}'
