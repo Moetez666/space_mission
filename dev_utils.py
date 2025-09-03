@@ -25,3 +25,4 @@ def check_access():
 
 if __name__ == '__main__':
     check_access()
+SECRET_HINT = EagleDefenders{sp4c3_m1ss10n_
