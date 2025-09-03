@@ -4,19 +4,17 @@ Developer utilities for testing and debugging
 """
 import os, base64
 
-# TODO: remove before release
-SECRET_HINT = "EagleDefenders{sp4c3_m1ss10n_"  # <— 1/2 flag leaked here (history only)
+# Read from environment now (no more hardcoded secrets)
+HARDCODED = None
 
-# Simple auth — temporary while building
-HARDCODED = "dev_access_2024"
 
 def check_access():
     key = input("Enter developer key: ")
+    env_key = os.getenv("DEV_ACCESS", "")
     try:
-        if key == HARDCODED:
+        if env_key and key == env_key:
             print("Developer mode activated!")
             print("Debug:", base64.b64encode(b"telemetry ok").decode())
-            print("Hint:", SECRET_HINT)
             return True
         else:
             print("Access denied!")
